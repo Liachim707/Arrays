@@ -68,7 +68,7 @@ public class DefaultCustomArrayList<E> implements CustomArrayList<E> {
     @Override
     public boolean contains(E element) {
         for (int i = 0; i < size; i++) {
-            if (elements[i].equals(element)) {
+            if (Objects.equals(elements[i], element)) {
                 return true;
             }
         }
