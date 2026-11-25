@@ -1,5 +1,6 @@
 import java.util.Iterator;
 import java.util.NoSuchElementException;
+import java.util.Objects;
 
 public class DefaultCustomArrayList<E> implements CustomArrayList<E> {
     private static final int DEFAULT_CAPACITY = 10;
@@ -21,7 +22,7 @@ public class DefaultCustomArrayList<E> implements CustomArrayList<E> {
     @Override
     public boolean remove(E element) {
         for (int i = 0; i < size; i++) {
-            if (elements[i].equals(element)) {
+            if (Objects.equals(elements[i], element)) {
                 removeAt(i);
                 return true;
             }
